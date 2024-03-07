@@ -13,47 +13,65 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 
 
 let uName = document.getElementById('infoname');
-let uRange = document.getElementById(parseInt('inforange'));
-let uAge = document.getElementById(parseInt('infoage'));
+let uRange = document.getElementById(('inforange'));
+let uAge = document.getElementById(('infoage'));
 let elButtonStart = document.querySelector('#start')
 let elButtonCancel = document.querySelector('#cancel')
 
+
 let price = uRange * (0.21);
 
-console.log(uRange, uAge);
-console.log(price);
+// console.log(uRange, uAge);
+// console.log(price);
 
-elButtonStart.addEventListener('click', function(){
+elButtonStart.addEventListener('click', function () {
     // console.log('clikkato');
     const infoname = uName.value;
-    console.log(infoname)
+    const inforange = parseFloat(uRange.value);
+    const infoage = uAge.value;
+    // console.log(infoname, inforange)
+
+
+    // variabili per sconti
+    let price = (uRange * 0.21).toFixed(2);
+    let juniorPrice = price - (price * 20 / 100).toFixed(2);
+    let seniorPrice = price - (price * 40 / 100).toFixed(2);
+    if (isNaN(inforange)) {
+        console.log('Inserisci un numero valido.');
+        return;
+    } else if (infoage === 'normal') {
+        price = juniorPrice
+        console.log(juniorPrice);
+
+
+    } else if (infoage === 'senior') {
+        price = seniorPrice
+        console.log(seniorPrice);
+
+    }
+    else {
+
+        console.log(price)
+    }
+    document.getElementById('display').innerHTML = 'Prezzo del biglietto: ' + price.toFixed(2) + '€';
+
+
+
+
 });
 
 
 
 
-// if (isNaN(kmrange) || (isNaN(age))) {
+// if (isNaN(uRange)) {
 //     console.log('dati inseriti non validi.')
 //     document.getElementById('theresult').innerHTML = 'Dati inseriti non validi.';
 
 // } else {
-//     price = kmrange * 0.21;
+//     price = uRange * 0.21;
 
-//     if (age < 18) {
+//     
 
-//         price = price - (price * 20 / 100);
-//         console.log(price);
-//         document.getElementById('theresult').innerHTML = 'Prezzo del biglietto: ' + price.toFixed(2) + '€';
-
-//     } else if (age >= 65) {
-
-//         price = price - (price * 40 / 100);
-//         console.log(price);
-//         document.getElementById('theresult').innerHTML = 'Prezzo del biglietto: ' + price.toFixed(2) + '€';
-//     }
-//     document.getElementById('theresult').innerHTML = 'Prezzo del biglietto: ' + price.toFixed(2) + '€';
-
-// }
 
 
 
