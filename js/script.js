@@ -29,48 +29,60 @@ elButtonStart.addEventListener('click', function () {
     const infoname = uName.value;
     const inforange = parseFloat(uRange.value);
     const infoage = uAge.value;
-    // console.log(infoname, inforange)
+    console.log(infoname, inforange)
 
 
     // variabili per sconti
-    let price = (uRange * 0.21).toFixed(2);
+    let price = (inforange * 0.21).toFixed(2);
     let juniorPrice = price - (price * 20 / 100).toFixed(2);
     let seniorPrice = price - (price * 40 / 100).toFixed(2);
+
     if (isNaN(inforange)) {
         console.log('Inserisci un numero valido.');
         return;
-    } else if (infoage === 'normal') {
+
+
+    } else if (infoage === 'junior') {
         price = juniorPrice
         console.log(juniorPrice);
-
 
     } else if (infoage === 'senior') {
         price = seniorPrice
         console.log(seniorPrice);
-
     }
     else {
-
         console.log(price)
     }
-    document.getElementById('display').innerHTML = 'Prezzo del biglietto: ' + price.toFixed(2) + '€';
+    let wagoNumber = getRndInteger(1, 9);
+    console.log(wagoNumber);
+    let codeNumber = getRndInteger(1, 99999);
+    console.log(codeNumber);
 
 
 
+    document.getElementById('printname').innerHTML = infoname;
+    document.getElementById('offer').innerHTML = infoage;
+    document.getElementById('wagon').innerHTML = wagoNumber;
+    document.getElementById('codcp').innerHTML = codeNumber;
 
+});
+
+elButtonCancel.addEventListener('click', function () {
+    uName.value = '';
+    uRange.value = '';
+    uAge.value = '';
+
+    document.getElementById('printname').innerHTML = '';
+    document.getElementById('offer').innerHTML = '';
+    document.getElementById('wagon').innerHTML ='';
+    document.getElementById('codcp').innerHTML = '';
+    
 });
 
 
 
 
-// if (isNaN(uRange)) {
-//     console.log('dati inseriti non validi.')
-//     document.getElementById('theresult').innerHTML = 'Dati inseriti non validi.';
 
-// } else {
-//     price = uRange * 0.21;
-
-//     
 
 
 
