@@ -16,9 +16,9 @@
 
 <body>
     <!-- creo una parte superiore per inserimento dei dati -->
-    <div class="generals">
-        <h2 class="text-center ">Calcola il prezzo del tuo biglietto</h2>
-        <div id="theform" class="container  m-4 m-auto ">
+ 
+        <h2 class="text-center m-4 my-5 ">Calcola il prezzo del tuo biglietto</h2>
+        <div id="theform" class="container my-5 mx-auto ">
             <div class="d-flex justify-content-evenly  ">
                 <div class="p-2 ">
                     <label for="infoname" class="form-label">Nome Cognome</label>
@@ -33,9 +33,9 @@
                 <div class="p-2 ">
                     <label for="infoage" class="form-label">Fascia d'età</label>
                     <select type="text" class="form-control" id="infoage">
-                        <option value="normal">Adult</option>
-                        <option value="junior">Minor</option>
-                        <option value="senior">Over65</option>
+                        <option value="Normal">Adult</option>
+                        <option value="Junior">Minor</option>
+                        <option value="Senior">Over65</option>
                     </select>
                 </div>
             </div>
@@ -46,32 +46,33 @@
                 </div>
             </div>
         </div>
-        <h2 class="text-center ">Il tuo biglietto</h2>
+    
+        <h2 class="text-center m-4 d-none">Il tuo biglietto</h2>
 
-        <div id="ticket" class="container m-auto d-flex justify-content-between   ">
-            <div id="displayname">
+        <div id="ticket" class="container m-auto d-flex justify-content-between d-none">
+            <div class=" d-flex flex-column justify-content-around bg-secondary text-white  ">
                 <h4 class="text-uppercase">Dettagli passeggero</h4>
                 <div id="printname"></div>
             </div>
-            <div class="debug">
+            <div class="d-flex flex-column justify-content-around  ">
                 <h4 class="">Tariffa</h4>
                 <div id="offer"></div>
             </div>
-            <div class="debug">
+            <div class="d-flex flex-column justify-content-around " >
                 <h4>Carrozza</h4>
                 <div id="wagon"></div>
             </div>
-            <div class="debug">
+            <div class="d-flex flex-column justify-content-around ">
                 <h4>Codice cp</h4>
                 <div id="codcp"></div>
             </div>
-            <div class="debug">
+            <div class="d-flex flex-column justify-content-around ">
                 <h4>Prezzo del biglietto</h4>
                 <div id="priceticket"></div>
             </div>
         </div>
 
-    </div>
+
 
 
 

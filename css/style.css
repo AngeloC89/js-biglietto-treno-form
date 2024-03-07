@@ -4,48 +4,44 @@
     box-sizing: border-box;
 }
 
-/* sotto */
-#ticket{
-    border-radius: 40px;
-
-    background-color: rgb(215, 128, 128);
-    border: 1px solid black;
-    
-}
-#ticket div{
-    width: 170px;
-    text-align: center;
-    margin: 0 auto;
-    
-}
-h4{
-    font-size: 1.3em;
-}
-
-/* sopra */
-#theform{
-
-    border: 1px solid black;
-    
-}
-
-#displayname{
-    width: 300px;
-    height: 190px;
-    border: 1px solid black;
-    
-    
-}
-
-.generals{
-    border-radius: 40px;
-    background-color: rgb(98, 221, 98);
-    margin: auto;
-    border: 3px solid green;
-    width: 1000px;
-}
-
-.debug{
-    border: 1px solid red;
-
-}
+body{
+    background-color: black;
+  }
+  
+  /* sotto */
+  #ticket{
+     height: 200px;
+      border-radius: 20px;
+  
+      background-color: rgb(255, 255, 255);
+      border: 1px solid black;
+      
+  }
+  #ticket div{
+      width: 170px;
+      text-align: center;
+      margin: 0 auto;
+      
+  }
+  h4{
+      font-size: 1.2em;
+  }
+  
+  /* sopra */
+  #theform{
+      margin-bottom: 50px;
+      border-radius: 40px;
+      box-shadow: 32px 18px 44px 8px white;
+   
+      border: 1px solid rgb(255, 255, 255);
+      
+  }
+  
+  .debug{
+      border: 1px solid red;
+  
+  }
+  
+  h2{
+      color: white
+  }

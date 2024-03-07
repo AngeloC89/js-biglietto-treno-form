@@ -21,6 +21,7 @@ let elButtonCancel = document.querySelector('#cancel')
 
 let price = uRange * (0.21);
 
+
 // console.log(uRange, uAge);
 // console.log(price);
 
@@ -29,7 +30,9 @@ elButtonStart.addEventListener('click', function () {
     const infoname = uName.value;
     const inforange = parseFloat(uRange.value);
     const infoage = uAge.value;
+
     console.log(infoname, inforange)
+    document.getElementById("ticket").classList.remove("d-none");
 
 
     // variabili per sconti
@@ -42,16 +45,16 @@ elButtonStart.addEventListener('click', function () {
         return;
 
 
-    } else if (infoage === 'junior') {
-        price = juniorPrice
+    } else if (infoage === 'Junior') {
+        price = juniorPrice.toFixed(2);
         console.log(juniorPrice);
 
-    } else if (infoage === 'senior') {
-        price = seniorPrice
+    } else if (infoage === 'Senior') {
+        price = seniorPrice.toFixed(2);
         console.log(seniorPrice);
     }
     else {
-        console.log(price)
+        console.log(price);
     }
     let wagoNumber = getRndInteger(1, 9);
     console.log(wagoNumber);
@@ -64,6 +67,7 @@ elButtonStart.addEventListener('click', function () {
     document.getElementById('offer').innerHTML = infoage;
     document.getElementById('wagon').innerHTML = wagoNumber;
     document.getElementById('codcp').innerHTML = codeNumber;
+    document.getElementById('priceticket').innerHTML = price +'€';
 
 });
 
@@ -72,10 +76,14 @@ elButtonCancel.addEventListener('click', function () {
     uRange.value = '';
     uAge.value = '';
 
+
+    document.getElementById("ticket").classList.add("d-none");
     document.getElementById('printname').innerHTML = '';
     document.getElementById('offer').innerHTML = '';
     document.getElementById('wagon').innerHTML ='';
     document.getElementById('codcp').innerHTML = '';
+    document.getElementById('priceticket').innerHTML = '';
+
     
 });
 
