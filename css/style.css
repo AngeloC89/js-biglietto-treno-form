@@ -4,44 +4,61 @@
     box-sizing: border-box;
 }
 
-body{
+h1 {
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+    animation: glow 0.7s ease-in-out infinite alternate;
+}
+@keyframes glow {
+    0% {
+      text-shadow: 0 0 10px #fbfbfb, 0 0 20px #b381de, 0 0 30px #b347b6;
+    }
+    100% {
+      text-shadow: 0 0 20px #338869, 0 0 30px #1c661c, 0 0 40px #fdfdfd;
+    }
+  }
+
+h2 {
+    color: white
+}
+
+
+h4 {
+    font-size: 1.2em;
+}
+
+body {
     background-color: black;
-  }
-  
-  /* sotto */
-  #ticket{
-     height: 200px;
-      border-radius: 20px;
-  
-      background-color: rgb(255, 255, 255);
-      border: 1px solid black;
-      
-  }
-  #ticket div{
-      width: 170px;
-      text-align: center;
-      margin: 0 auto;
-      
-  }
-  h4{
-      font-size: 1.2em;
-  }
-  
-  /* sopra */
-  #theform{
-      margin-bottom: 50px;
-      border-radius: 40px;
-      box-shadow: 32px 18px 44px 8px white;
+}
+
+/* sotto */
+#ticket {
+    border: 10px solid orange;
+    height: 200px;
+    border-radius: 20px;
+
+    background-color: rgb(255, 255, 255);
    
-      border: 1px solid rgb(255, 255, 255);
-      
-  }
-  
-  .debug{
-      border: 1px solid red;
-  
-  }
-  
-  h2{
-      color: white
-  }
+}
+
+#ticket div {
+    width: 170px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+
+/* sopra */
+#theform {
+    margin-bottom: 50px;
+    border-radius: 40px;
+    box-shadow: 32px 18px 44px 8px white;
+
+    border: 1px solid rgb(255, 255, 255);
+
+}
+
+.debug {
+    border: 1px solid red;
+
+}

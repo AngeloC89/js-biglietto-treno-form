@@ -15,62 +15,64 @@
 </head>
 
 <body>
+
+    <h1 class="display-1 text-white text-center p-4 ">Running Dog Agenzy</h1>
     <!-- creo una parte superiore per inserimento dei dati -->
- 
-        <h2 class="text-center m-4 my-5 ">Calcola il prezzo del tuo biglietto</h2>
-        <div id="theform" class="container my-5 mx-auto ">
-            <div class="d-flex justify-content-evenly  ">
-                <div class="p-2 ">
-                    <label for="infoname" class="form-label">Nome Cognome</label>
-                    <input type="text" class="form-control" id="infoname">
 
-                </div>
-                <div class="p-2 ">
-                    <label for="inforange" class="form-label">Km da percorrere</label>
-                    <input type="text" class="form-control" id="inforange">
+    <h2 class="text-center m-4 my-5 ">Calcola il prezzo del tuo biglietto</h2>
+    <div id="theform" class="container my-5 mx-auto ">
+        <div class="d-flex justify-content-evenly  ">
+            <div class="p-2 ">
+                <label for="infoname" class="form-label text-white">Nome Cognome</label>
+                <input type="text" class="form-control" id="infoname">
 
-                </div>
-                <div class="p-2 ">
-                    <label for="infoage" class="form-label">Fascia d'età</label>
-                    <select type="text" class="form-control" id="infoage">
-                        <option value="Normal">Adult</option>
-                        <option value="Junior">Minor</option>
-                        <option value="Senior">Over65</option>
-                    </select>
-                </div>
             </div>
-            <div>
-                <div class="d-flex justify-content-center  m-4">
-                    <button id="start" class="btn btn-info mx-1 ">Genera</button>
-                    <button id="cancel" class="btn btn-danger   mx-1">Annulla</button>
-                </div>
+            <div class="p-2 ">
+                <label for="inforange" class="form-label text-white">Km da percorrere</label>
+                <input type="text" class="form-control" id="inforange">
+
+            </div>
+            <div class="p-2 ">
+                <label for="infoage" class="form-label text-white">Fascia d'età</label>
+                <select class="form-control" id="infoage">
+                    <option value="Normal">Adult</option>
+                    <option value="Junior">Minor</option>
+                    <option value="Senior">Over65</option>
+                </select>
             </div>
         </div>
-    
-        <h2 class="text-center m-4 d-none">Il tuo biglietto</h2>
-
-        <div id="ticket" class="container m-auto d-flex justify-content-between d-none">
-            <div class=" d-flex flex-column justify-content-around bg-secondary text-white  ">
-                <h4 class="text-uppercase">Dettagli passeggero</h4>
-                <div id="printname"></div>
-            </div>
-            <div class="d-flex flex-column justify-content-around  ">
-                <h4 class="">Tariffa</h4>
-                <div id="offer"></div>
-            </div>
-            <div class="d-flex flex-column justify-content-around " >
-                <h4>Carrozza</h4>
-                <div id="wagon"></div>
-            </div>
-            <div class="d-flex flex-column justify-content-around ">
-                <h4>Codice cp</h4>
-                <div id="codcp"></div>
-            </div>
-            <div class="d-flex flex-column justify-content-around ">
-                <h4>Prezzo del biglietto</h4>
-                <div id="priceticket"></div>
+        <div>
+            <div class="d-flex justify-content-center  m-4">
+                <button id="start" class="btn btn-info mx-1 ">Genera</button>
+                <button id="cancel" class="btn btn-danger   mx-1">Annulla</button>
             </div>
         </div>
+    </div>
+
+    <h2 class="text-center m-4 d-none">Il tuo biglietto</h2>
+
+    <div id="ticket" class="container m-auto d-flex justify-content-between d-none">
+        <div class=" d-flex flex-column justify-content-around bg-secondary text-white  ">
+            <h4 class="text-uppercase">Dettagli passeggero</h4>
+            <div id="printname"></div>
+        </div>
+        <div class="d-flex flex-column justify-content-around  ">
+            <h4 class="">Tariffa</h4>
+            <div id="offer"></div>
+        </div>
+        <div class="d-flex flex-column justify-content-around ">
+            <h4>Carrozza</h4>
+            <div id="wagon"></div>
+        </div>
+        <div class="d-flex flex-column justify-content-around ">
+            <h4>Codice cp</h4>
+            <div id="codcp"></div>
+        </div>
+        <div class="d-flex flex-column justify-content-around ">
+            <h4>Prezzo del biglietto</h4>
+            <div id="priceticket"></div>
+        </div>
+    </div>
 
 
 
