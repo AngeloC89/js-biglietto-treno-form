@@ -41,7 +41,7 @@ elButtonStart.addEventListener('click', function () {
     let seniorPrice = price - (price * 40 / 100).toFixed(2);
 
     if (isNaN(inforange)) {
-        document.getElementById("ticket").className.add("display-1");
+        document.getElementById("ticket").classList.add("display-1");
         document.getElementById("ticket").innerHTML = 'Dati inseriti non validi.';
 
         console.log('Inserisci un numero valido.');
