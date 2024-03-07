@@ -48,7 +48,7 @@ elButtonStart.addEventListener('click', function () {
         return;
 
 
-    } else if (infoage === 'Junior') {
+    } else if (infoage === 'Junior'){
         price = juniorPrice.toFixed(2);
         console.log(juniorPrice);
 
